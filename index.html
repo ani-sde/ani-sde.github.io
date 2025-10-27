@@ -3,104 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Product / Project Manager</title>
-  <meta name="description" content="Resume website for a Project Manager — experience, skills, projects and contact." />
+  <title>Your Name — Senior Data Engineer / Project Manager</title>
+  <meta name="description" content="Resume website — experience, skills, education, certifications and achievements." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f1724; /* dark navy */
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#06b6d4; /* teal */
-      --glass: rgba(255,255,255,0.03);
-      --max-width:1000px;
-      color-scheme: dark;
+      --bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.03);--max-width:1000px;color-scheme:dark;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background:linear-gradient(180deg,var(--bg), #071026 120%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:40px 20px;
-      display:flex;
-      justify-content:center;
-    }
-    .wrap{
-      width:100%;
-      max-width:var(--max-width);
-    }
-    .card{
-      background:linear-gradient(180deg,var(--card), rgba(6,6,10,0.6));
-      border-radius:12px;
-      padding:28px;
-      box-shadow:0 8px 30px rgba(2,6,23,0.6);
-      border:1px solid rgba(255,255,255,0.03);
-    }
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:18px;
-    }
+    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg),#071026 120%);color:#e6eef6;padding:40px 20px;display:flex;justify-content:center}
+    .wrap{width:100%;max-width:var(--max-width)}
+    .card{background:linear-gradient(180deg,var(--card),rgba(6,6,10,0.6));border-radius:12px;padding:28px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    header{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-bottom:18px}
     .left{display:flex;gap:18px;align-items:center}
-    .avatar{
-      width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:#021b22;font-size:20px
-    }
+    .avatar{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021b22;font-size:20px;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
     h1{margin:0;font-size:22px}
     p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
     .contact{display:flex;gap:10px;align-items:center}
     .btn{background:var(--accent);color:#021b22;padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none}
-
-    main{
-      display:grid;
-      grid-template-columns: 1fr 340px;
-      gap:20px;
-      margin-top:18px;
-    }
-    @media (max-width:900px){
-      main{grid-template-columns:1fr}
-      .right{order:2}
-    }
+    main{display:grid;grid-template-columns:1fr 340px;gap:20px;margin-top:18px}
+    @media (max-width:900px){main{grid-template-columns:1fr}.right{order:2}}
     section{background:var(--glass);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
     h2{margin:0;font-size:16px}
     .muted{color:var(--muted);font-size:13px}
-
-    /* Experience list */
-    .experience{display:flex;flex-direction:column;gap:14px}
-    .exp-item{padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
-    .exp-head{display:flex;justify-content:space-between;align-items:center}
-    .role{font-weight:700}
-    .company{font-size:13px;color:var(--muted)}
-    ul{margin:8px 0 0 18px;color:var(--muted);line-height:1.55}
-
-    /* Skills */
     .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .skill{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;font-size:13px;color:var(--muted);}
-
-    /* Projects */
-    .project{margin-bottom:10px}
-    .project-title{font-weight:600}
-
-    /* Footer / contact form */
-    .contact-form{display:flex;flex-direction:column;gap:8px}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
-    textarea{min-height:100px}
-    .small{font-size:13px;color:var(--muted);}
-
-    .meta{display:flex;gap:12px;flex-wrap:wrap}
-    .pill{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
-
-    .download{display:inline-flex;gap:8px;align-items:center}
-
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;font-size:13px;color:var(--muted)}
+    footer{margin-top:30px;text-align:center}
+    ul{margin-top:8px;padding-left:20px}
+    li{margin-bottom:4px}
   </style>
 </head>
 <body>
@@ -108,102 +42,103 @@
     <div class="card">
       <header>
         <div class="left">
-          <div class="avatar">YN</div>
+          <div class="avatar"><img src="logo.png" alt="Logo"></div>
           <div>
-            <h1>Your Name — Project Manager</h1>
-            <p class="lead">Project Manager | Customer 360 | Banking, Credit Card & E‑commerce | Global clients (35+ countries)</p>
-            <div class="meta" style="margin-top:8px">
-              <div class="pill">Open to opportunities</div>
-              <div class="pill">Based in — Your City, Country</div>
-            </div>
+            <h1>Your Name — Senior Data Engineer / Project Manager</h1>
+            <p class="lead">Data Engineering | Project Management | Analytics | Cloud & Pipeline Solutions</p>
           </div>
         </div>
         <div class="contact">
           <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn" href="resume.pdf" download>Download Resume</a>
         </div>
       </header>
 
       <main>
         <div>
-          <section aria-labelledby="summary">
-            <h2 id="summary">Summary</h2>
-            <p class="muted" style="margin-top:8px">Strategic Project Manager with experience delivering data-driven products in banking, credit card and e‑commerce domains. Led multi-country Customer 360 implementations, drove data governance and reporting programs, and partnered with cross-functional engineering, analytics and business teams to deliver measurable outcomes.</p>
-          </section>
+          <section id="experience">
+            <h2>Experience</h2>
+            <div class="muted" style="margin-top:8px">
+              <h3>Senior Data Engineer (Data COE) — Publicis Sapient</h3>
+              <p>JUNE 2022 – PRESENT | Retail Logistics (eCommerce) | Client: Sunbelt Rentals</p>
+              <ul>
+                <li>Led a team of 4 data engineers to create scalable data pipelines using Python, Spark, and SQL, improving efficiency by 30%.</li>
+                <li>Developed data solutions for OLTP application (VDOS), including ingestion, transformation, and storage.</li>
+                <li>Collaborated with Rental Man, Blue Yonder, and Salesforce teams to define requirements.</li>
+                <li>Enhanced analytics reporting via optimized SQL queries and automated data accuracy checks in SQL/Python.</li>
+                <li>Reduced processing time by 64% through performance tuning and workflow optimization.</li>
+              </ul>
 
-          <section style="margin-top:14px" aria-labelledby="experience">
-            <h2 id="experience">Experience</h2>
-            <div class="experience" style="margin-top:12px">
+              <h3>Analyst II (Customer 360) — American Express</h3>
+              <p>JAN 2022 – JUNE 2022 | Banking, Credit Card, E-commerce | Clients: 35+ Countries</p>
+              <ul>
+                <li>Led project coordination for Customer 360, integrating global customer data systems.</li>
+                <li>Drove data integrity improvements and defined quality KPIs across teams.</li>
+                <li>Delivered credit utilization dashboards (Tableau) consolidating multi-source SQL/Python data.</li>
+                <li>Streamlined ad-hoc reporting workflows in SQL and Excel for faster turnaround.</li>
+              </ul>
 
-              <div class="exp-item">
-                <div class="exp-head">
-                  <div>
-                    <div class="role">Project Manager — Customer 360</div>
-                    <div class="company">Confidential | Banking, Credit Card & E‑commerce</div>
-                  </div>
-                  <div class="muted">Jan 2023 — Present</div>
-                </div>
-                <ul>
-                  <li>Led end-to-end project delivery for the Customer 360 program across 35+ country clients, aligning stakeholders and prioritizing releases against business impact.</li>
-                  <li>Oversaw data audit operations, defined quality KPIs, and directed cross-functional teams to remediate data integrity and customer identification issues for credit card datasets.</li>
-                  <li>Coordinated with development, analytics and QA teams to translate client requirements into technical specifications, ensuring timely delivery of ETL and reporting changes.</li>
-                  <li>Managed delivery of weekly and monthly credit utilization dashboards (Tableau) integrating multiple data sources; owned release schedule and stakeholder sign‑offs.</li>
-                  <li>Streamlined ad‑hoc reporting processes using SQL and Python automation—reduced turnaround time for client requests by improving repeatable query templates and runbooks.</li>
-                </ul>
-              </div>
+              <h3>Senior Data Developer (Data Analysis & Reporting) — AXA XL</h3>
+              <p>AUG 2019 – OCT 2021 | CEDED / Reinsurance / Commercial Insurance | Clients: 28 Countries</p>
+              <ul>
+                <li>Processed Solvency 2 & Schedule F reports using SQL, PySpark, Python — reduced delivery time from a week to 2 days.</li>
+                <li>Created Tableau & QlikView dashboards with DOD, YOY, MOM, MAU, DAU metrics.</li>
+                <li>Automated ETL workflows with Python and Airflow; analyzed 10M+ rows via Databricks.</li>
+                <li>Built ML models (Decision Tree, Random Forest, KNN) to identify high-risk CAT areas.</li>
+              </ul>
 
-              <!-- Add more roles as needed -->
+              <h3>Graduate Engineer (Business Intelligence) — Guardian Life</h3>
+              <p>MAR 2018 – AUG 2019 | Absence/Disability/Benefits Management (US & Canada)</p>
+              <ul>
+                <li>Developed data warehousing and ETL replication models using SQL, Python, SSIS.</li>
+                <li>Implemented Spark-based analysis for batch and real-time pipelines using Kafka & Spark.</li>
+                <li>Automated business reporting via Python apps — saved 47 hours/week.</li>
+                <li>Used ML (LDA, NLTK, Decision Tree) for log clustering and anomaly detection — saved 20 hours/week.</li>
+              </ul>
             </div>
           </section>
 
-          <section style="margin-top:14px" aria-labelledby="projects">
-            <h2 id="projects">Selected Projects</h2>
-            <div class="project" style="margin-top:10px">
-              <div class="project-title">Customer 360 — Global Rollout</div>
-              <div class="muted" style="margin-top:6px">Delivered a global Customer 360 capability for credit card customers that unified identity, transaction and product data across regional systems—improved reporting accuracy and reduced reconciliation exceptions by 40%.</div>
-            </div>
-            <div class="project">
-              <div class="project-title">Credit Utilization Dashboards</div>
-              <div class="muted" style="margin-top:6px">Designed and governed recurring dashboards in Tableau, sourcing data from SQL and Python pipelines for executives and regional operations teams.</div>
-            </div>
+          <section id="education" style="margin-top:14px">
+            <h2>Education</h2>
+            <ul>
+              <li>M. Tech Data Science & Engineering — BITS Pilani (CGPA 8.10, 2020–2022)</li>
+              <li>B. Tech Computer Science & Engineering — Pondicherry University (CGPA 7.35, 2013–2017)</li>
+              <li>Higher Secondary (Science + CS) — Kendriya Vidyalaya (82%)</li>
+            </ul>
           </section>
 
-          <section style="margin-top:14px" aria-labelledby="education">
-            <h2 id="education">Education</h2>
-            <div style="margin-top:8px" class="muted">Bachelor's degree in a relevant field (or specify)</div>
+          <section id="certifications" style="margin-top:14px">
+            <h2>Certifications</h2>
+            <ul>
+              <li>Microsoft Certified: Fabric Data Engineer Associate</li>
+              <li>SAFe Agile Certified (Scaled Agile Framework)</li>
+              <li>Data Manipulation & Business Analysis using Spreadsheets (Coursera)</li>
+            </ul>
           </section>
 
+          <section id="achievements" style="margin-top:14px">
+            <h2>Achievements</h2>
+            <p class="muted">State Project Exhibition: Winner (PU) | Star Developer Award: Guardian Life | Appreciation Award & “You Have Earned It”: AXA | Analyst of the Month (Mar) – American Express | Partnering for Client Impact, Learning Mindset & Embracing the Future – Publicis Sapient</p>
+          </section>
         </div>
 
         <aside class="right">
-          <section aria-labelledby="skills">
-            <h2 id="skills">Skills & Tools</h2>
+          <section id="skills">
+            <h2>Skills & Tools</h2>
             <div class="skills">
-              <div class="skill">Project Management</div>
-              <div class="skill">Stakeholder Management</div>
-              <div class="skill">SQL</div>
-              <div class="skill">Python (Pandas, NumPy)</div>
-              <div class="skill">Tableau</div>
-              <div class="skill">Data Governance</div>
-              <div class="skill">Advanced Excel</div>
-              <div class="skill">Agile / Scrum</div>
+              <div class="skill">Languages: SQL, Python, Spark, VBA, Advanced Excel, Java</div>
+              <div class="skill">Web Technologies: HTML, CSS, JSON, API</div>
+              <div class="skill">Version Control: Git, TFS, GitHub, Bitbucket</div>
+              <div class="skill">Databases: Oracle, MySQL, SQL Server</div>
+              <div class="skill">Cloud: Azure Data Factory, Azure Databricks, Snowflake</div>
+              <div class="skill">Pipeline: SSIS, ADF, Airflow</div>
+              <div class="skill">Tableau, Power BI, Data Governance, Agile / Scrum</div>
             </div>
           </section>
 
-          <section style="margin-top:14px" aria-labelledby="contact">
-            <h2 id="contact">Contact</h2>
-            <p class="muted" style="margin-top:8px">Replace the placeholders below with your details.</p>
-            <div style="margin-top:8px" class="muted">Email: <strong>youremail@example.com</strong><br>Phone: <strong>+91 98765 43210</strong><br>LinkedIn: <strong>linkedin.com/in/yourprofile</strong></div>
-
-            <div style="margin-top:12px">
-              <a class="download" href="#download" onclick="downloadPDF()">⬇️ Download resume (PDF)</a>
-            </div>
-          </section>
-
-          <section style="margin-top:14px" aria-labelledby="why">
-            <h2 id="why">Quick Facts</h2>
-            <div class="muted" style="margin-top:8px">Domain experience: Banking, Credit Card, E‑commerce</div>
-            <div class="muted" style="margin-top:6px">Client reach: 35+ countries</div>
-            <div class="muted" style="margin-top:6px">Reporting cadence: Weekly / Monthly</div>
+          <section id="contact" style="margin-top:14px">
+            <h2>Contact</h2>
+            <div class="muted">Email: <strong>youremail@example.com</strong><br>Phone: <strong>+91 98765 43210</strong><br>LinkedIn: <strong>linkedin.com/in/yourprofile</strong></div>
           </section>
         </aside>
       </main>
@@ -213,11 +148,5 @@
       </footer>
     </div>
   </div>
-
-  <script>
-    function downloadPDF(){
-      alert('To enable PDF download: export your resume to PDF and add the file to this repo, then update this link to point to the PDF.');
-    }
-  </script>
 </body>
 </html>
