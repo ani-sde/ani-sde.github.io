@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Product / Project Manager</title>
+  <meta name="description" content="Resume website for a Project Manager — experience, skills, projects and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --max-width:1000px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--bg), #071026 120%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+    }
+    .card{
+      background:linear-gradient(180deg,var(--card), rgba(6,6,10,0.6));
+      border-radius:12px;
+      padding:28px;
+      box-shadow:0 8px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .left{display:flex;gap:18px;align-items:center}
+    .avatar{
+      width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#021b22;font-size:20px
+    }
+    h1{margin:0;font-size:22px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+    .contact{display:flex;gap:10px;align-items:center}
+    .btn{background:var(--accent);color:#021b22;padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none}
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+      margin-top:18px;
+    }
+    @media (max-width:900px){
+      main{grid-template-columns:1fr}
+      .right{order:2}
+    }
+    section{background:var(--glass);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    h2{margin:0;font-size:16px}
+    .muted{color:var(--muted);font-size:13px}
+
+    /* Experience list */
+    .experience{display:flex;flex-direction:column;gap:14px}
+    .exp-item{padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .exp-head{display:flex;justify-content:space-between;align-items:center}
+    .role{font-weight:700}
+    .company{font-size:13px;color:var(--muted)}
+    ul{margin:8px 0 0 18px;color:var(--muted);line-height:1.55}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;font-size:13px;color:var(--muted);}
+
+    /* Projects */
+    .project{margin-bottom:10px}
+    .project-title{font-weight:600}
+
+    /* Footer / contact form */
+    .contact-form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:100px}
+    .small{font-size:13px;color:var(--muted);}
+
+    .meta{display:flex;gap:12px;flex-wrap:wrap}
+    .pill{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .download{display:inline-flex;gap:8px;align-items:center}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="left">
+          <div class="avatar">YN</div>
+          <div>
+            <h1>Your Name — Project Manager</h1>
+            <p class="lead">Project Manager | Customer 360 | Banking, Credit Card & E‑commerce | Global clients (35+ countries)</p>
+            <div class="meta" style="margin-top:8px">
+              <div class="pill">Open to opportunities</div>
+              <div class="pill">Based in — Your City, Country</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </header>
+
+      <main>
+        <div>
+          <section aria-labelledby="summary">
+            <h2 id="summary">Summary</h2>
+            <p class="muted" style="margin-top:8px">Strategic Project Manager with experience delivering data-driven products in banking, credit card and e‑commerce domains. Led multi-country Customer 360 implementations, drove data governance and reporting programs, and partnered with cross-functional engineering, analytics and business teams to deliver measurable outcomes.</p>
+          </section>
+
+          <section style="margin-top:14px" aria-labelledby="experience">
+            <h2 id="experience">Experience</h2>
+            <div class="experience" style="margin-top:12px">
+
+              <div class="exp-item">
+                <div class="exp-head">
+                  <div>
+                    <div class="role">Project Manager — Customer 360</div>
+                    <div class="company">Confidential | Banking, Credit Card & E‑commerce</div>
+                  </div>
+                  <div class="muted">Jan 2023 — Present</div>
+                </div>
+                <ul>
+                  <li>Led end-to-end project delivery for the Customer 360 program across 35+ country clients, aligning stakeholders and prioritizing releases against business impact.</li>
+                  <li>Oversaw data audit operations, defined quality KPIs, and directed cross-functional teams to remediate data integrity and customer identification issues for credit card datasets.</li>
+                  <li>Coordinated with development, analytics and QA teams to translate client requirements into technical specifications, ensuring timely delivery of ETL and reporting changes.</li>
+                  <li>Managed delivery of weekly and monthly credit utilization dashboards (Tableau) integrating multiple data sources; owned release schedule and stakeholder sign‑offs.</li>
+                  <li>Streamlined ad‑hoc reporting processes using SQL and Python automation—reduced turnaround time for client requests by improving repeatable query templates and runbooks.</li>
+                </ul>
+              </div>
+
+              <!-- Add more roles as needed -->
+            </div>
+          </section>
+
+          <section style="margin-top:14px" aria-labelledby="projects">
+            <h2 id="projects">Selected Projects</h2>
+            <div class="project" style="margin-top:10px">
+              <div class="project-title">Customer 360 — Global Rollout</div>
+              <div class="muted" style="margin-top:6px">Delivered a global Customer 360 capability for credit card customers that unified identity, transaction and product data across regional systems—improved reporting accuracy and reduced reconciliation exceptions by 40%.</div>
+            </div>
+            <div class="project">
+              <div class="project-title">Credit Utilization Dashboards</div>
+              <div class="muted" style="margin-top:6px">Designed and governed recurring dashboards in Tableau, sourcing data from SQL and Python pipelines for executives and regional operations teams.</div>
+            </div>
+          </section>
+
+          <section style="margin-top:14px" aria-labelledby="education">
+            <h2 id="education">Education</h2>
+            <div style="margin-top:8px" class="muted">Bachelor's degree in a relevant field (or specify)</div>
+          </section>
+
+        </div>
+
+        <aside class="right">
+          <section aria-labelledby="skills">
+            <h2 id="skills">Skills & Tools</h2>
+            <div class="skills">
+              <div class="skill">Project Management</div>
+              <div class="skill">Stakeholder Management</div>
+              <div class="skill">SQL</div>
+              <div class="skill">Python (Pandas, NumPy)</div>
+              <div class="skill">Tableau</div>
+              <div class="skill">Data Governance</div>
+              <div class="skill">Advanced Excel</div>
+              <div class="skill">Agile / Scrum</div>
+            </div>
+          </section>
+
+          <section style="margin-top:14px" aria-labelledby="contact">
+            <h2 id="contact">Contact</h2>
+            <p class="muted" style="margin-top:8px">Replace the placeholders below with your details.</p>
+            <div style="margin-top:8px" class="muted">Email: <strong>youremail@example.com</strong><br>Phone: <strong>+91 98765 43210</strong><br>LinkedIn: <strong>linkedin.com/in/yourprofile</strong></div>
+
+            <div style="margin-top:12px">
+              <a class="download" href="#download" onclick="downloadPDF()">⬇️ Download resume (PDF)</a>
+            </div>
+          </section>
+
+          <section style="margin-top:14px" aria-labelledby="why">
+            <h2 id="why">Quick Facts</h2>
+            <div class="muted" style="margin-top:8px">Domain experience: Banking, Credit Card, E‑commerce</div>
+            <div class="muted" style="margin-top:6px">Client reach: 35+ countries</div>
+            <div class="muted" style="margin-top:6px">Reporting cadence: Weekly / Monthly</div>
+          </section>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="muted">Made with ♥ • Replace content and personalize. Hosted easily on GitHub Pages.</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function downloadPDF(){
+      alert('To enable PDF download: export your resume to PDF and add the file to this repo, then update this link to point to the PDF.');
+    }
+  </script>
+</body>
+</html>
